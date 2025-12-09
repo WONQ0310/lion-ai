@@ -50,7 +50,7 @@
   - Shadcn UI ButtonとCardを使用
   - _要件: 2.1, 2.2, 2.3, 2.4, 6.1, 6.2, 6.3_
 
-- [ ]* 6.1 Linksコンポーネントのユニットテスト
+- [x] 6.1 Linksコンポーネントのユニットテスト
   - Lion AIリンクの存在と正しいURLを検証
   - WONQリンクの存在と正しいURLを検証
   - rel="noopener noreferrer"が設定されていることを検証
