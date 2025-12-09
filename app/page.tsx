@@ -8,6 +8,10 @@ export default function Home() {
   const currentYear = new Date().getFullYear();
   const copyright = `© ${currentYear} ${profileData.name}. All rights reserved.`;
 
+  const basePath = "/lion-ai";
+  // 画像のフルパスを作成
+  const imagePath = `${basePath}${profileData.profileImage}`;
+
   // JSON-LD構造化データ（Personスキーマ）
   const jsonLd = {
     "@context": "https://schema.org",
@@ -19,11 +23,11 @@ export default function Home() {
       name: profileData.company.name,
       url: profileData.company.url,
     },
-    image: `https://iwashita-naoto.github.io${profileData.profileImage}`,
-    url: "https://iwashita-naoto.github.io/",
+    image: `https://iwashita-naoto.github.io${imagePath}`,
+    url: "https://iwashita-naoto.github.io/lion-ai/",
     sameAs: [
       profileData.company.url,
-      ...profileData.relatedLinks.map(link => link.url),
+      ...profileData.relatedLinks.map((link) => link.url),
     ],
     description: profileData.biography.join(" "),
     knowsAbout: profileData.expertise,
@@ -40,7 +44,7 @@ export default function Home() {
         name={profileData.name}
         title={profileData.title}
         company={profileData.company}
-        profileImage={profileData.profileImage}
+        profileImage={imagePath}
       />
       <main className="container mx-auto px-4 py-8 max-w-6xl space-y-8">
         <Profile
