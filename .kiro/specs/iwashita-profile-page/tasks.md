@@ -60,7 +60,7 @@
   - **プロパティ 1: すべての外部リンクは有効なURL形式を持つ**
   - **検証: 要件 2.1, 2.2, 6.1, 6.2**
 
-- [ ] 7. Footerコンポーネントの実装
+- [x] 7. Footerコンポーネントの実装
   - components/Footer.tsxを作成
   - 著作権表示を実装
   - Shadcn UI Separatorを使用
