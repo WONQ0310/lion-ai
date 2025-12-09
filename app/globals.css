@@ -3,15 +3,113 @@
 @tailwind utilities;
 
 :root {
+  /* カラースキーム */
   --color-primary: #2563eb;
   --color-secondary: #64748b;
   --color-accent: #0ea5e9;
   --color-text: #1e293b;
   --color-background: #ffffff;
   --color-surface: #f8fafc;
+  
+  /* タイポグラフィ */
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --line-height-base: 1.6;
+  --line-height-tight: 1.4;
+  
+  /* スペーシング */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* ブレークポイント */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 body {
   color: var(--color-text);
   background: var(--color-background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* レスポンシブタイポグラフィ */
+@media (max-width: 767px) {
+  /* モバイル */
+  :root {
+    --font-size-base: 14px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 28px;
+  }
+  
+  body {
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* タブレット */
+  :root {
+    --font-size-base: 15px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 30px;
+  }
+  
+  body {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* デスクトップ */
+  body {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ユーティリティクラス */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* アクセシビリティ */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 画像の最適化 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
