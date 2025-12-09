@@ -1,7 +1,13 @@
-import React from 'react';
-import { ExternalLink } from '@/types/profile';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { ExternalLink } from "@/types/profile";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 interface LinksProps {
   links: ExternalLink[];
@@ -12,7 +18,9 @@ export const Links: React.FC<LinksProps> = ({ links }) => {
     <Card className="w-full">
       <CardHeader>
         <CardTitle>関連リンク</CardTitle>
-        <CardDescription>会社公式サイトとAI事業に関する関連サイト</CardDescription>
+        <CardDescription>
+          会社公式サイトとAI事業に関する関連サイト
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {links.map((link, index) => (
@@ -20,12 +28,14 @@ export const Links: React.FC<LinksProps> = ({ links }) => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div className="flex-1">
                 <h3 className="font-semibold text-lg">{link.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{link.description}</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {link.description}
+                </p>
               </div>
               <Button
                 asChild
                 variant="default"
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto text-white"
               >
                 <a
                   href={link.url}
