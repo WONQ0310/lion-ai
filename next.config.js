@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // 静的エクスポート時は必須
   },
+  basePath: "/lion-ai",
   // パフォーマンス最適化
   compiler: {
     removeConsole: process.env.NODE_ENV === "production", // 本番環境でconsole.logを削除
