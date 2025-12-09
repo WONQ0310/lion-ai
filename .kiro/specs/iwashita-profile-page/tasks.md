@@ -79,7 +79,7 @@
   - **プロパティ 3: HTMLはセマンティック構造を持つ**
   - **検証: 要件 7.3**
 
-- [ ] 9. ルートレイアウトの実装（app/layout.tsx）
+- [x] 9. ルートレイアウトの実装（app/layout.tsx）
   - HTMLメタデータを設定（title、description）
   - Open Graphタグを追加
   - グローバルスタイルを適用
