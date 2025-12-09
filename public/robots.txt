@@ -1,0 +1,16 @@
+# robots.txt for iwashita-naoto.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://iwashita-naoto.github.io/sitemap.xml
+
+# Disallow crawling of build artifacts
+Disallow: /_next/
+Disallow: /api/
+
+# Allow all other content
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
